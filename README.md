@@ -1,1 +1,1 @@
-# Angular2_training
+# This is a sample project created to demonstrate some of the capabilities of Angular2 framework.
