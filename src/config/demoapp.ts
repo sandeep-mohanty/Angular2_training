@@ -5,6 +5,7 @@ import {AttributeDirectivesBuiltin} from "../demo_components/attributeDirectives
 import {StructuralDirectivesBuiltin} from "../demo_components/structuralDirectivesBuiltin";
 import {AttributeDirectivesCustom} from "../demo_components/attributeDirectivesCustom";
 import {StructuralDirectivesCustom} from "../demo_components/structuralDirectivesCustom";
+import {ParentComponentForService} from "../demo_components/components_for_services/parentComponentForService";
 
 @Component({
     selector: "app",
@@ -14,16 +15,18 @@ import {StructuralDirectivesCustom} from "../demo_components/structuralDirective
         <!-- Component Examples -->
         <two-way></two-way>
         <data-flow [dataToChild] = "dataToChild" (childDataChange) = updateDataFromChild($event)></data-flow><br/>
-        <div align = "center"><span>Data from child: {{dataFromChild}}</span></div>
+        <!--<div align = "center"><span>Data from child: {{dataFromChild}}</span></div>-->
         
         <!-- Directive Examples -->
         <attribute-directives-builtin></attribute-directives-builtin>
         <structural-directives-builtin></structural-directives-builtin>
         <attribute-directives-custom></attribute-directives-custom>
         <structural-directives-custom></structural-directives-custom>
+        <parent-component-for-service></parent-component-for-service>
     `,
     //directives: [TwoWayBinding,DataFlow,AttributeDirectivesBuiltin]
-    directives: [AttributeDirectivesBuiltin, StructuralDirectivesBuiltin,AttributeDirectivesCustom,StructuralDirectivesCustom]
+    //directives: [AttributeDirectivesBuiltin, StructuralDirectivesBuiltin,AttributeDirectivesCustom,StructuralDirectivesCustom]
+    directives: [ParentComponentForService]
 })
 
 export class Demo_App {
@@ -35,10 +38,10 @@ export class Demo_App {
     
     constructor() {
         this.title = "Angular2 Demo Application";
-        this.color = "red";
+        this.color = "blue";
         this.dataToChild = "Hello from parent";
         this.dataFromChild = "No data yet";
-        setInterval(()=>{
+        /*setInterval(()=>{
            
            if (this.title === "Angular2 Demo Application" ) {
                this.title = "This title changes every 2 seconds";
@@ -48,7 +51,7 @@ export class Demo_App {
                this.color = "red";
            }
             
-        }, 2000);
+        }, 2000);*/
     }
     
     updateDataFromChild(data){
