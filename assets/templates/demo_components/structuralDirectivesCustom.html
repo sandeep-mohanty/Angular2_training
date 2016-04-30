@@ -1,0 +1,7 @@
+<section>
+    <br/>
+    <div align="center">Show Image: <input type="checkbox" #show (click)="setShowFlag(show.checked)"/> </div>
+    <div align = "center" *customIf = "showFlag" >
+        <img [src] ="imageUrl" />
+    </div>
+</section>

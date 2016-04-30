@@ -3,7 +3,8 @@ import {TwoWayBinding} from "../demo_components/twoWayBinding";
 import {DataFlow} from "../demo_components/dataFlow";
 import {AttributeDirectivesBuiltin} from "../demo_components/attributeDirectivesBuiltin";
 import {StructuralDirectivesBuiltin} from "../demo_components/structuralDirectivesBuiltin";
-import {AttributeDirectivesCustom} from "../demo_components/attributeDirectivesCustom";;
+import {AttributeDirectivesCustom} from "../demo_components/attributeDirectivesCustom";
+import {StructuralDirectivesCustom} from "../demo_components/structuralDirectivesCustom";
 
 @Component({
     selector: "app",
@@ -19,9 +20,10 @@ import {AttributeDirectivesCustom} from "../demo_components/attributeDirectivesC
         <attribute-directives-builtin></attribute-directives-builtin>
         <structural-directives-builtin></structural-directives-builtin>
         <attribute-directives-custom></attribute-directives-custom>
+        <structural-directives-custom></structural-directives-custom>
     `,
     //directives: [TwoWayBinding,DataFlow,AttributeDirectivesBuiltin]
-    directives: [AttributeDirectivesBuiltin, StructuralDirectivesBuiltin,AttributeDirectivesCustom]
+    directives: [AttributeDirectivesBuiltin, StructuralDirectivesBuiltin,AttributeDirectivesCustom,StructuralDirectivesCustom]
 })
 
 export class Demo_App {
