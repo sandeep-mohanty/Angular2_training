@@ -16,8 +16,9 @@ export class AttributeDirectivesBuiltin {
         
         this.styleApplied = false;
         this.customStyles = {
-            highlight: false,
-            bold: false
+            'font-style': null, 
+            'font-size': null, 
+            'font-weight': null
         };
         
         this.customClasses = {
