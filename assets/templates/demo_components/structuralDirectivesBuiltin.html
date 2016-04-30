@@ -1,0 +1,8 @@
+<section>
+    <br/>
+    <div align="center"><button type="button" (click) = "handleShow($event)">{{buttonText}}</button></div>
+    <div *ngIf = "showFlag" align = "center">
+        <span><h3>List of some popular Javascript libraries:</h3></span>
+        <span *ngFor = "let framework of JSFrameworks"><h3>{{framework}}</h3></span>
+    </div>
+</section>

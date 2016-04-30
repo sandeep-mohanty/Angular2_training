@@ -1,6 +1,8 @@
 import {Component} from "angular2/core";
 import {TwoWayBinding} from "../demo_components/twoWayBinding";
 import {DataFlow} from "../demo_components/dataFlow";
+import {AttributeDirectivesBuiltin} from "../demo_components/attributeDirectivesBuiltin";
+import {StructuralDirectivesBuiltin} from "../demo_components/structuralDirectivesBuiltin";
 
 @Component({
     selector: "app",
@@ -13,8 +15,11 @@ import {DataFlow} from "../demo_components/dataFlow";
         <div align = "center"><span>Data from child: {{dataFromChild}}</span></div>
         
         <!-- Directive Examples -->
+        <attribute-directives-builtin></attribute-directives-builtin>
+        <structural-directives-builtin></structural-directives-builtin>
     `,
-    directives: [TwoWayBinding,DataFlow]
+    //directives: [TwoWayBinding,DataFlow,AttributeDirectivesBuiltin]
+    directives: [AttributeDirectivesBuiltin, StructuralDirectivesBuiltin]
 })
 
 export class Demo_App {
