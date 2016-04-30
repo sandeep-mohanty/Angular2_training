@@ -32,7 +32,7 @@ gulp.task("ntscompile", function(){
 
 // Watch source folders for change in source code
 gulp.task("watch", function(){
-	gulp.watch(["src/*.*"], ["clean","ntscompile"]);
+	gulp.watch(["./src/**/*.ts","./assets/templates/demo_components/*.html"], ["clean","ntscompile"]);
 	console.log("\nI'm watching the source folder now for code changes !");
 });
 
