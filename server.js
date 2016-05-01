@@ -1,9 +1,11 @@
 // Launch a http server on node locally
+"use strict";
 
 // Define and initialize all the required properties and functions we need to launch the application
 var os = require("os");
 var ifaces = os.networkInterfaces();
 var express = require("express");
+var bodyParser = require("body-parser");
 var fs = require("fs");
 var PORT = process.env.PORT || 3000;
 var app = null;
@@ -28,11 +30,28 @@ var getServerIp = function() {
 
 var ipaddress = getServerIp() || "localhost";
 
+var colors = ["Red"];
+
 // Here we will define and invoke an IIFE function which would create a http server to serve a static index.html file.
 (function() {
 
 	app = express();
 	app.use(express.static('.'));
+    app.use(bodyParser.json());
+    
+    app.get("/colors", function(req, res){
+		console.log("Hurray got a request to serve !");
+		res.setHeader("Content-Type", "application/json");
+		res.send(JSON.stringify(colors));
+	});
+    
+    app.post("/colors", function(req,res){
+        let color = req.body.color;
+        colors.push(color);
+        res.setHeader("Content-Type", "application/json");
+        res.send(JSON.stringify(colors));
+    });
+    
 	app.listen(PORT, ipaddress, function(){
 		console.log("\nThe server IP address and port details are as follows:\n");
 		console.log("Server port: " + PORT + "\nServer address: " + ipaddress);
