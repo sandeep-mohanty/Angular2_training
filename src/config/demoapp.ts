@@ -16,7 +16,11 @@ import {PipesComponent} from "../demo_components/components_for_pipes/pipesCompo
         <div align="center"><span [style.color] = "color"><h1>{{title}}</h1></span></div>
         
         <!-- Component Examples -->
+        
+        <!-- Two-way data binding -->
         <two-way></two-way>
+        
+        <!-- Data flow parent-to-child and child-to-parent
         <data-flow [dataToChild] = "dataToChild" (childDataChange) = updateDataFromChild($event)></data-flow><br/>
         <!--<div align = "center"><span>Data from child: {{dataFromChild}}</span></div>-->
         
@@ -25,9 +29,15 @@ import {PipesComponent} from "../demo_components/components_for_pipes/pipesCompo
         <structural-directives-builtin></structural-directives-builtin>
         <attribute-directives-custom></attribute-directives-custom>
         <structural-directives-custom></structural-directives-custom>
+        
+        <!-- Services in action -->
         <parent-component-for-service></parent-component-for-service>
-        <!--<template-driven-form></template-driven-form>-->
+        
+        <!-- Angular2 Forms -->
+        <template-driven-form></template-driven-form>
         <form-builder-driven-form></form-builder-driven-form>
+        
+        <!-- Angular2 Pipes -->
         <pipes-component></pipes-component>
         
     `,
