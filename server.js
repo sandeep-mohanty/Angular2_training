@@ -46,15 +46,15 @@ var colors = ["Red"];
 	});
     
     app.get("/firstroutercomponent", function(req, res){
-		res.sendfile("index.html");
+		res.sendFile(__dirname + "/index.html");
 	});
     
     app.get("/secondroutercomponent", function(req, res){
-		res.sendfile("index.html");
+		res.sendFile(__dirname + "/index.html");
 	});
     
     app.get("/thirdroutercomponent", function(req, res){
-		res.sendfile("index.html");
+		res.sendFile(__dirname + "./index.html");
 	});
     
     app.post("/colors", function(req,res){

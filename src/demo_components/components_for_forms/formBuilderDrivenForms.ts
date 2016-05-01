@@ -71,11 +71,10 @@ export class FormBuilderDrivenForms implements OnInit {
                 Validators.required,
                 this.shouldbe8characters
             ])]
-        })
+        });
     }
     
     onLogin(formObject) {
-        
         console.dir(formObject);
         this.signIn.email = formObject.value.email;
         this.signIn.password = formObject.value.password;
