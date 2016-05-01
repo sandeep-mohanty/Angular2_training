@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--This is required if you are using routing. Not required otherwise -->
+    <base href = "/">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <title></title>
 
   </head>
 
   <body>
     <!-- Your Application gets generated inside "app" tag at runtime -->
-    <app></app>
+    <!--<app></app>-->
+    
+    <!-- Use this as the root component for router examples-->
+    <parent-router-component></parent-router-component>
 
     <!-- Bootstrap and its dependency library "jquery" -->
     <script src="./assets/js/jquery.js"></script>
@@ -26,9 +32,15 @@
     <script src="./node_modules/systemjs/dist/system.src.js"></script>
     <script src="./node_modules/rxjs/bundles/Rx.js"></script>
     <script src="./node_modules/angular2/bundles/angular2.dev.js"></script>
+    
+    <!-- Required if you are using Angular2's "Http" providers.-->
     <script src="./node_modules/angular2/bundles/http.dev.js"></script>
+    
+    <!-- Required if you are using Angular's "Routing" providers-->
+    <script src="./node_modules/angular2/bundles/router.dev.js"></script>
 
     <!-- Script that triggers bootstrapping of LMC app -->
     <script src="./dist/config/initializer.js"></script>
+    
   </body>
 </html>

@@ -9,6 +9,7 @@ import {ParentComponentForService} from "../demo_components/components_for_servi
 import {TemplateDrivenForms} from "../demo_components/components_for_forms/templateDrivenForms";
 import {FormBuilderDrivenForms} from "../demo_components/components_for_forms/formBuilderDrivenForms";
 
+
 @Component({
     selector: "app",
     template: `
@@ -27,11 +28,12 @@ import {FormBuilderDrivenForms} from "../demo_components/components_for_forms/fo
         <parent-component-for-service></parent-component-for-service>
         <!--<template-driven-form></template-driven-form>-->
         <form-builder-driven-form></form-builder-driven-form>
+        
     `,
     //directives: [TwoWayBinding,DataFlow,AttributeDirectivesBuiltin]
     //directives: [AttributeDirectivesBuiltin, StructuralDirectivesBuiltin,AttributeDirectivesCustom,StructuralDirectivesCustom]
     //directives: [ParentComponentForService]
-    directives: [TemplateDrivenForms,FormBuilderDrivenForms]
+    //directives: [TemplateDrivenForms,FormBuilderDrivenForms]
 })
 
 export class Demo_App {

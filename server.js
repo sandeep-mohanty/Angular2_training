@@ -45,6 +45,18 @@ var colors = ["Red"];
 		res.send(JSON.stringify(colors));
 	});
     
+    app.get("/firstroutercomponent", function(req, res){
+		res.sendfile("index.html");
+	});
+    
+    app.get("/secondroutercomponent", function(req, res){
+		res.sendfile("index.html");
+	});
+    
+    app.get("/thirdroutercomponent", function(req, res){
+		res.sendfile("index.html");
+	});
+    
     app.post("/colors", function(req,res){
         console.log("Hurray got a new POST request to serve !");
         let color = req.body.color;
