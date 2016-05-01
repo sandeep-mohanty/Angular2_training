@@ -40,12 +40,13 @@ var colors = ["Red"];
     app.use(bodyParser.json());
     
     app.get("/colors", function(req, res){
-		console.log("Hurray got a request to serve !");
+		console.log("Hurray got a new GET request to serve !");
 		res.setHeader("Content-Type", "application/json");
 		res.send(JSON.stringify(colors));
 	});
     
     app.post("/colors", function(req,res){
+        console.log("Hurray got a new POST request to serve !");
         let color = req.body.color;
         colors.push(color);
         res.setHeader("Content-Type", "application/json");

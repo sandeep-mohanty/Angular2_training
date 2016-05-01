@@ -6,6 +6,8 @@ import {StructuralDirectivesBuiltin} from "../demo_components/structuralDirectiv
 import {AttributeDirectivesCustom} from "../demo_components/attributeDirectivesCustom";
 import {StructuralDirectivesCustom} from "../demo_components/structuralDirectivesCustom";
 import {ParentComponentForService} from "../demo_components/components_for_services/parentComponentForService";
+import {TemplateDrivenForms} from "../demo_components/components_for_forms/templateDrivenForms";
+import {FormBuilderDrivenForms} from "../demo_components/components_for_forms/formBuilderDrivenForms";
 
 @Component({
     selector: "app",
@@ -23,10 +25,13 @@ import {ParentComponentForService} from "../demo_components/components_for_servi
         <attribute-directives-custom></attribute-directives-custom>
         <structural-directives-custom></structural-directives-custom>
         <parent-component-for-service></parent-component-for-service>
+        <!--<template-driven-form></template-driven-form>-->
+        <form-builder-driven-form></form-builder-driven-form>
     `,
     //directives: [TwoWayBinding,DataFlow,AttributeDirectivesBuiltin]
     //directives: [AttributeDirectivesBuiltin, StructuralDirectivesBuiltin,AttributeDirectivesCustom,StructuralDirectivesCustom]
-    directives: [ParentComponentForService]
+    //directives: [ParentComponentForService]
+    directives: [TemplateDrivenForms,FormBuilderDrivenForms]
 })
 
 export class Demo_App {
